@@ -1,4 +1,4 @@
-#Deploy Nginx on AWS ECS Fargate using Terraform
+##Deploy Nginx on AWS ECS Fargate using Terraform
 This project provisions an Nginx server running on Amazon ECS Fargate using Terraform. It includes setting up a custom VPC, ECS cluster, Fargate service, task definition, IAM roles, and networking components with minimal configuration.
 #Features
 ● Custom VPC with public subnets
