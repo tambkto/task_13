@@ -33,9 +33,6 @@ terraform plan
 
 # Step 3: Apply and provision the infrastructure
 terraform apply
-
-# Step 4: Destroy infrastructure when done
-terraform destroy
 ```
 ## 📦 Provisioned Resources
 
