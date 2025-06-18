@@ -19,8 +19,9 @@ This repository uses **Terraform** to provision AWS infrastructure and deploy an
 ## 🔐 AWS CLI Configuration
 
 Ensure your CLI is configured with proper credentials:
+```bash
 aws configure
-
+```
 ## ⚙️ Deployment Steps
 
 ```bash
