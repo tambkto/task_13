@@ -15,8 +15,7 @@ This repository uses **Terraform** to provision AWS infrastructure and deploy an
 
 ## 📁 Folder Structure
 
-Picture
-
+![Folder Structure](./folder_structure.png)
 ## 🔐 AWS CLI Configuration
 
 Ensure your CLI is configured with proper credentials:
