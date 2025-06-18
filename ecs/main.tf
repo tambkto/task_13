@@ -3,6 +3,7 @@ resource "aws_ecs_cluster" "ecs_cluster" {
 }
 resource "aws_ecr_repository" "nginx_repo" {
   name = "umar/repo"
+  force_delete = true
 }
 resource "null_resource" "push_nginx_to_ecr" {
   provisioner "local-exec" {
@@ -16,7 +17,7 @@ resource "null_resource" "push_nginx_to_ecr" {
     EOT
   }
 
-  depends_on = [aws_ecr_repository.nginx_repo]
+  depends_on = [aws_ecr_repository.nginx_repo] //ensures ecr repo is created before script runs
 }
 resource "aws_iam_role" "ecs_task_execution_role" {
   name = "ecsTaskExecutionRole2"
@@ -38,7 +39,7 @@ resource "aws_iam_role" "ecs_task_execution_role" {
 #IAM role  policy for pulling image from ecr
 resource "aws_iam_role_policy_attachment" "ecs_execution_ecr" {
   role       = aws_iam_role.ecs_task_execution_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
 
 # Creating an ECS task definition
