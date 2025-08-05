@@ -7,3 +7,6 @@ output "aws_subnet" {
 output "aws_route_table" {
   value = aws_route_table.public_route_table.id
 }
+output "security_groups" {
+  value = aws_security_group.sg.id
+}

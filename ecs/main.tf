@@ -2,7 +2,7 @@ resource "aws_ecs_cluster" "ecs_cluster" {
   name = "${var.owner_name}_cluster"
 }
 resource "aws_ecr_repository" "nginx_repo" {
-  name = "umar/repo"
+  name = "umar/repo1"
   force_delete = true
 }
 resource "null_resource" "push_nginx_to_ecr" {
@@ -20,7 +20,7 @@ resource "null_resource" "push_nginx_to_ecr" {
   depends_on = [aws_ecr_repository.nginx_repo] //ensures ecr repo is created before script runs
 }
 resource "aws_iam_role" "ecs_task_execution_role" {
-  name = "ecsTaskExecutionRole2"
+  name = "ecsTaskExecutionRole1"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -107,7 +107,4 @@ resource "aws_ecs_service" "service" {
     subnets          = [var.aws_subnet]
   }
 
-  lifecycle {
-    ignore_changes = [task_definition]
-  }
 }

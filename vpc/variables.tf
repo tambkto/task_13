@@ -10,3 +10,6 @@ variable "public_subnet_cidr" {
 variable "cidr_allowing_all" {
   type = string
 } 
+variable "cidr-allowing-all" {
+  type = string
+}

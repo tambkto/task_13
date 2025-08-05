@@ -10,3 +10,9 @@ variable "public-subnet-cidr" {
 variable "ownername" {
   type = string
 }
+variable "ami" {
+  type = string
+}
+variable "instance-type" {
+  type = string
+}
