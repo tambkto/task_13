@@ -1,4 +1,4 @@
-**DEPLOYMENT ON ECS VIA JENKINS** 
+                    **DEPLOYMENT ON ECS VIA JENKINS** 
 
 This project creates ECS Cluster and EC2 via Terraform. Jenkins is configured on EC2 by following the Master Slave architecture. Jenkins Pipeline is created which deploys the application automatically over ECS. 
 
