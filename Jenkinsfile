@@ -2,7 +2,7 @@ pipeline {
     agent { label 'slave13'}
     environment {
         AWS_REGION = 'us-east-2'
-        ECR_REPOSITORY_URI = '504649076991.dkr.ecr.us-east-2.amazonaws.com/task13'
+        ECR_REPOSITORY_URI = '504649076991.dkr.ecr.us-east-2.amazonaws.com/umar/repo1'
         IMAGE_TAG = "latest"
         GIT_REPO_URL = 'https://github.com/tambkto/task_13'
         ECS_CLUSTER = 'Umar_cluster'
